@@ -9,7 +9,7 @@ class MatrixTester;
 
 class Matrix {
  public:
-  friend class MatrixTester;
+  friend class MatrixTkkkkkester;
 
   Matrix(); // for testing, useless in practice
   Matrix(unsigned int rows, unsigned int cols);
