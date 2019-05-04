@@ -19,10 +19,10 @@ int main(int argc, char** argv) {
 
 bool MatrixTester::Test_AssignOp() const {
   const int kRows = 3, kCols = 4;
-  Matrix<double> m1, m2;
-  m1.m_ = new double *[kRows];
+  Matrix<int> m1, m2;  //this
+  m1.m_ = new int *[kRows];  //this
   for (unsigned int i = 0; i < kRows; ++i) {
-    m1.m_[i] = new double[kCols];
+    m1.m_[i] = new int[kCols];  //this
 
     for (unsigned int j = 0; j < kCols; ++j)
       m1.m_[i][j] = (i + 1.333)*(j + 1.667);
@@ -31,7 +31,7 @@ bool MatrixTester::Test_AssignOp() const {
   m1.cols_ = kCols;
 
   // TEST ASSIGNMENT OP CORRECT RETURN
-  const Matrix<double> *m_ptr = &(m2 = m1);
+  const Matrix<int> *m_ptr = &(m2 = m1);  //this
   if (m_ptr != &m2) {
     cout << "  Expected return address of assigment: " << &m2
         << ", Actual: " << m_ptr << endl;

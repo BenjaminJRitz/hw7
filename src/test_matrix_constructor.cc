@@ -20,10 +20,10 @@ int main(int argc, char** argv) {
 
 bool MatrixTester::Test_CopyConstructor() const {
   const int kRows = 3, kCols = 4;
-  Matrix<double> m1;
-  m1.m_ = new double *[kRows];
+  Matrix<int> m1; //this
+  m1.m_ = new int *[kRows];  //this
   for (unsigned int i = 0; i < kRows; ++i) {
-    m1.m_[i] = new double[kCols];
+    m1.m_[i] = new int[kCols];  //int
 
     for (unsigned int j = 0; j < kCols; ++j)
       m1.m_[i][j] = (i + 1.333)*(j + 1.667);
@@ -32,7 +32,7 @@ bool MatrixTester::Test_CopyConstructor() const {
   m1.cols_ = kCols;
 
   // TEST ASSIGNMENT OP DEEP COPY
-  Matrix<double> m2 = m1;
+  Matrix<int> m2 = m1;  //this
   if (m1.m_ == m2.m_ || !m2.m_) {
     cout << "  Expected Address of matrix 2's array: NOT " << m1.m_
       << ", Actual: " << m2.m_ << endl;

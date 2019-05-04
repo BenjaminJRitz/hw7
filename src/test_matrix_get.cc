@@ -18,15 +18,15 @@ int main(int argc, char** argv) {
 
 bool MatrixTester::Test_Get() const {
   const int kRows = 3, kCols = 3;
-  const double kM[kRows][kCols] = {
+  const double kM[kRows][kCols] = {  //this
     {1.5, 2.980, 3.087},
     {2.5, 4.980, 6.087},
     {3.5, 6.980, 9.087}
   };
-  Matrix<double> m;
-  m.m_ = new double *[kRows];
+  Matrix<int> m;  //this
+  m.m_ = new int *[kRows];  //this
   for (unsigned int i = 0; i < kRows; ++i) {
-    m.m_[i] = new double[kCols];
+    m.m_[i] = new int[kCols];  //this
     for (unsigned int j = 0; j < kCols; ++j)
         m.m_[i][j] = kM[i][j];
   }

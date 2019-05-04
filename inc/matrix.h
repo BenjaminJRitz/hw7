@@ -78,4 +78,6 @@ class Matrix {
    unsigned int cols_;
 };
 
+#include "matrix.cc"
+
 #endif  // NOLINT
