@@ -17,6 +17,21 @@ Matrix<T>::Matrix(unsigned int rows, unsigned int cols) :
 }
 
 template <class T>
+Matrix<T>::Matrix(const Matrix<T>& that) {
+  rows_ = that.getRows();
+  cols_ = that.getCols();
+  m_ = new T *[rows_];  // create array of double pointers
+  for (unsigned int i = 0; i < rows_; ++i)
+    m_[i] = new T[cols_];  // create array of doubles
+
+  for (unsigned int i = 0; i < rows_; ++i) {
+    for (unsigned int j = 0; j < cols_; ++j) {
+      m_[i][j] = that.Get(i, j);
+    }  // Ending bracket for inner for loop
+  }  // Ending bracket for outer for loop
+}  // Ending bracket for method Matrix
+
+template <class T>
 Matrix<T>::~Matrix() {
   for (unsigned int i = 0; i < this->rows_; ++i) {
     delete[] this->m_[i];

@@ -1,4 +1,6 @@
-/* Copyright 2019 Jeremy S Lewis CSCE240 Templated Dynamic Array */
+// Copyright 2019 <Benjamin Ritz>
+#ifndef INC_MATRIX_H  // NOLINT
+#define INC_MATRIX_H  // NOLINT
 
 #include <cassert>
 // using assert
@@ -75,3 +77,5 @@ class Matrix {
    unsigned int rows_;
    unsigned int cols_;
 };
+
+#endif  // NO LINT
