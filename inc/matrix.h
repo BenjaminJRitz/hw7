@@ -78,4 +78,4 @@ class Matrix {
    unsigned int cols_;
 };
 
-#endif  // NO LINT
+#endif  // NOLINT
