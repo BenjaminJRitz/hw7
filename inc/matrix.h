@@ -7,9 +7,10 @@
 
 class MatrixTester;
 
+template <class T>
 class Matrix {
  public:
-  friend class MatrixTkkkkkester;
+  friend class MatrixTester;
 
   Matrix(); // for testing, useless in practice
   Matrix(unsigned int rows, unsigned int cols);
@@ -33,7 +34,7 @@ class Matrix {
    *   - Parameter col is less than cols in matrix
    *   Returns matrix element from row and col. Type is same as matrix type.
    */
-  double Get(unsigned int row, unsigned int col) const;
+  T Get(unsigned int row, unsigned int col) const;
 
 
   /* Assignment Op: 2 Points
@@ -50,7 +51,7 @@ class Matrix {
    *   Parameter:
    *    - rhs will be the same type as the matrix
    */
-  const Matrix& operator*=(double rhs);
+  const Matrix& operator*=(T rhs);
 
 
   /* Add Op: 1 Point
@@ -62,9 +63,15 @@ class Matrix {
    */
   const Matrix operator+(const Matrix& rhs) const;
 
+  // Returns the row size of the matrix
+  unsigned int const getRows() const;
+
+  // Returns the column size of the matrix
+  unsigned int const getCols() const;
+
 
  private:
-   double **m_;
+   T **m_;
    unsigned int rows_;
    unsigned int cols_;
 };
