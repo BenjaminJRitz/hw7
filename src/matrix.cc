@@ -1,4 +1,4 @@
-/* Copyright 2019 Jeremy S Lewis CSCE240 Dynamic Array */
+// Copyright 2019 <Benjamin Ritz>
 
 #include <matrix.h>
 

@@ -14,7 +14,7 @@ class Matrix {
  public:
   friend class MatrixTester;
 
-  Matrix(); // for testing, useless in practice
+  Matrix();  // for testing, useless in practice
   Matrix(unsigned int rows, unsigned int cols);
 
 
@@ -73,11 +73,11 @@ class Matrix {
 
 
  private:
-   T **m_;
-   unsigned int rows_;
-   unsigned int cols_;
+  T **m_;
+  unsigned int rows_;
+  unsigned int cols_;
 };
 
-#include "matrix.cc"
+#include "matrix.cc"  // NOLINT
 
 #endif  // NOLINT
