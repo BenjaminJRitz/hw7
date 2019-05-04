@@ -19,7 +19,7 @@ class Matrix {
   /* Copy Constructor: 2 Points
    *   Performs deep copy.
    */
-  Matrix(const Matrix& that);
+  Matrix(const Matrix<T>& that);
 
 
   /* Destructor: Required For Any Points
@@ -43,7 +43,7 @@ class Matrix {
    *   - lhs cols must equal rhs cols
    *   Performs deep copy.
    */
-  const Matrix& operator=(const Matrix& rhs);
+  const Matrix<T>& operator=(const Matrix<T>& rhs);
 
 
   /* Times Equals Op: 1 Point
@@ -51,7 +51,7 @@ class Matrix {
    *   Parameter:
    *    - rhs will be the same type as the matrix
    */
-  const Matrix& operator*=(T rhs);
+  const Matrix<T>& operator*=(T rhs);
 
 
   /* Add Op: 1 Point
@@ -61,7 +61,7 @@ class Matrix {
    *   - lhs rows must equal rhs rows
    *   - lhs cols must equal rhs cols
    */
-  const Matrix operator+(const Matrix& rhs) const;
+  const Matrix<T> operator+(const Matrix<T>& rhs) const;
 
   // Returns the row size of the matrix
   unsigned int const getRows() const;
